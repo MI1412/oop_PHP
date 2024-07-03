@@ -14,7 +14,7 @@ class Manajer{
 
     public function info(): void
     {
-        echo "Nama : $this->nama\nTittle : $this->tittle\n";
+        echo "Nama : $this->nama\nTittle : $this->tittle\n\n";
     }
 }
 class Founder extends Manajer{

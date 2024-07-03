@@ -10,3 +10,8 @@ $manajer = new Manajer('Asep');
 $founder = new Founder('ucup');
 $info_manager = $manajer->info();
 $info_founder = $founder->info();
+// kalau function akan warning jika menambahkan argumen ketika dioverride
+
+
+
+
