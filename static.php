@@ -14,6 +14,25 @@ class Math{
         }
         return $total;
     }
+
+    static function getGanjil(int $max):Iterator{ // saat memakai iterator generator gunakan iterator untuk mengembalikan tipe data iterator
+        for($i = 0; $i<= $max; $i++){ // fase pembuatan iterator
+            if ($i % 2 == 1){
+                yield $i; // ini akan mengembalikan nilai generator tanpa membuat iterator / array lagi
+                // kalau butuh key dan value, contoh dibawah
+                // yield 'key'=>'value';
+            }
+        }
+    }
+    static function getGenap(int $max){
+        $array = [];
+        for ($i = 1;$i<=$max; $i++){
+            if ($i%2 == 0){
+                $array[] = $i;
+            }
+        }
+        return new ArrayIterator($array);
+    }
 }
 echo Math::$nama. PHP_EOL;
 

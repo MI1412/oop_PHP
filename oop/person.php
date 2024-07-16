@@ -5,7 +5,13 @@ namespace Person{ // tambahkan namespace kurung kurawal untuk membuat satu class
         const AUTHOR = "MI1412"; // Variabel Constanta / variabel tetap
         var ?string $nama; // properti
         var string $alamat; // properti
-    
+        private string $sample;
+        public function setSample(string $sample){
+            $this->sample = $sample;
+        }
+        public function __clone(){ // membuat modifikasi hasil dari cloningan objek
+            unset($this->sample); // unset properties $sample sehingga hasilnya tidak ada ketika diclone
+        }
         function info()  // contoh penggunaan self
         {
             $author = self::AUTHOR; // mengakses class menggunakan self
