@@ -10,12 +10,9 @@
 // contoh membuat exception
 // exception biasanya terjadi di function
 // untuk membuat exception menggunakan kata kunci throw diikuti dengan objek exception
-class ValidationException extends Exception{
-
-}
 
 // contoh membuat exception dengan method login request
-
+require_once "oop/ValidationException.php";
 require_once "oop/LoginRequest.php";
 // ini cara membuat eror beserta validasi
 function validateLoginRequest(LoginRequest $loginRequest){
